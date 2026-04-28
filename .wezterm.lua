@@ -20,6 +20,14 @@ local config = {
 			mods = "CMD",
 			action = wezterm.action({ SendString = "\x1bOF" }),
 		},
+    {
+      key = "k",
+      mods = "CMD",
+      action = wezterm.action.Multiple({
+        wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+        wezterm.action.SendKey({ key = "l", mods = "CTRL" }),
+      }),
+    },
 	},
 }
 
