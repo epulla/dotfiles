@@ -44,15 +44,28 @@ vim.keymap.set("n", "<leader>cp", function()
   vim.notify("Copied: " .. path)
 end, { desc = "Copy relative path" })
 
--- Move current buffer left or right in the bufferline
+-- buffers
 vim.keymap.set("n", "<leader>bh", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer left" })
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer right" })
+vim.keymap.set("n", "<leader>bL", function()
+  vim.cmd("vsplit")
+  vim.cmd("wincmd l")
+end, { desc = "Split Right and Focus" })
+vim.keymap.set("n", "<leader>bH", function()
+  vim.cmd("vsplit")
+end, { desc = "Split Right and Focus Left" })
+vim.keymap.set("n", "<leader>bJ", function()
+  vim.cmd("split")
+  vim.cmd("wincmd j")
+end, { desc = "Split Below and Focus" })
+vim.keymap.set("n", "<leader>bK", function()
+  vim.cmd("split")
+end, { desc = "Split Below and Focus Above" })
 
 -- git commands
 vim.keymap.set("n", "<leader>gj", function()
   require("gitsigns").nav_hunk("next")
 end, { desc = "Next Git Change" })
-
 vim.keymap.set("n", "<leader>gk", function()
   require("gitsigns").nav_hunk("prev")
 end, { desc = "Previous Git Change" })
