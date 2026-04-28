@@ -13,6 +13,11 @@
 -- formatting
 vim.keymap.set({ "n", "v" }, "<leader>p", function()
   LazyVim.format({ force = true })
+  local buf = vim.api.nvim_get_current_buf()
+  local lines = vim.api.nvim_buf_get_lines(buf, -2, -1, false)
+  if lines[1] ~= "" then
+    vim.api.nvim_buf_set_lines(buf, -1, -1, false, { "" })
+  end
 end, { desc = "Format" })
 
 -- vertical motions
@@ -28,6 +33,8 @@ end)
 -- vim.keymap.set("n", "<A-z>", "<leader>uw")
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
+vim.keymap.set("n", "<CR>", "o<Esc>", { desc = "New line below" })
+vim.keymap.set("n", "<S-CR>", "O<Esc>", { desc = "New line above" })
 
 -- suggestions
 vim.keymap.set("n", "gh", function()
@@ -69,4 +76,16 @@ end, { desc = "Next Git Change" })
 vim.keymap.set("n", "<leader>gk", function()
   require("gitsigns").nav_hunk("prev")
 end, { desc = "Previous Git Change" })
+
+-- terminal mode
+vim.keymap.set("n", "<leader>tt", function()
+  vim.cmd("terminal")
+end, { desc = "New Terminal" })
+vim.keymap.set("n", "<leader>tj", function()
+  vim.cmd("split | terminal")
+end, { desc = "New Terminal splitted horizontally (down)" })
+vim.keymap.set("n", "<leader>tl", function()
+  vim.cmd("vsplit | terminal")
+end, { desc = "New Terminal splitted vertically (left)" })
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
