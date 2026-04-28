@@ -48,3 +48,12 @@ end, { desc = "Copy relative path" })
 vim.keymap.set("n", "<leader>bh", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer left" })
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer right" })
 
+-- git commands
+vim.keymap.set("n", "<leader>gj", function()
+  require("gitsigns").nav_hunk("next")
+end, { desc = "Next Git Change" })
+
+vim.keymap.set("n", "<leader>gk", function()
+  require("gitsigns").nav_hunk("prev")
+end, { desc = "Previous Git Change" })
+
