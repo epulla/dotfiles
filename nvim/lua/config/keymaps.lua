@@ -38,9 +38,13 @@ end, { desc = "Hover" })
 vim.keymap.set("n", "<leader>o", ":silent !open %:p:h<CR>", { silent = true })
 
 -- copy relative path
-vim.keymap.set('n', '<leader>cp', function()
-  local path = vim.fn.expand('%:.')
-  vim.fn.setreg('+', path)
-  vim.notify('Copied: ' .. path)
-end, { desc = 'Copy relative path' })
+vim.keymap.set("n", "<leader>cp", function()
+  local path = vim.fn.expand("%:.")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path)
+end, { desc = "Copy relative path" })
+
+-- Move current buffer left or right in the bufferline
+vim.keymap.set("n", "<leader>bh", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer left" })
+vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer right" })
 
