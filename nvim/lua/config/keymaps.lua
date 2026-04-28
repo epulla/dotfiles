@@ -77,6 +77,11 @@ vim.keymap.set("n", "<leader>gk", function()
   require("gitsigns").nav_hunk("prev")
 end, { desc = "Previous Git Change" })
 
+-- lazygit
+vim.keymap.set("n", "<leader>gg", function()
+  Snacks.lazygit()
+end, { desc = "Lazygit" })
+
 -- terminal mode
 vim.keymap.set("n", "<leader>tt", function()
   vim.cmd("terminal")
