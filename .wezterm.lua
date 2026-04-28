@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
+local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 
-return {
+local config = {
 	text_background_opacity = 1.0,
 	keys = {
 		-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
@@ -19,3 +20,15 @@ return {
 		},
 	},
 }
+
+tabline.setup({
+	options = {
+		icons_enabled = true,
+		theme = "Catppuccin Mocha",
+	},
+})
+
+tabline.apply_to_config(config)
+
+return config
+
