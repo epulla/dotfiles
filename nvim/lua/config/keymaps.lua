@@ -92,5 +92,5 @@ end, { desc = "New Terminal splitted horizontally (down)" })
 vim.keymap.set("n", "<leader>tl", function()
   vim.cmd("vsplit | terminal")
 end, { desc = "New Terminal splitted vertically (left)" })
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("t", "<M-Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
