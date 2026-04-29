@@ -36,10 +36,13 @@ vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 vim.keymap.set("n", "<CR>", "o<Esc>", { desc = "New line below" })
 vim.keymap.set("n", "<S-CR>", "O<Esc>", { desc = "New line above" })
 
+-- LSP
 -- suggestions
 vim.keymap.set("n", "gh", function()
   vim.lsp.buf.hover()
 end, { desc = "Hover" })
+-- renaming
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename var" })
 
 -- open the current file's folder in finder
 vim.keymap.set("n", "<leader>o", ":silent !open %:p:h<CR>", { silent = true })
