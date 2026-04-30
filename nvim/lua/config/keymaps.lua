@@ -41,8 +41,6 @@ vim.keymap.set("n", "<S-CR>", "O<Esc>", { desc = "New line above" })
 vim.keymap.set("n", "gh", function()
   vim.lsp.buf.hover()
 end, { desc = "Hover" })
--- renaming
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename var" })
 
 -- open the current file's folder in finder
 vim.keymap.set("n", "<leader>o", ":silent !open %:p:h<CR>", { silent = true })
