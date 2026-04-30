@@ -28,6 +28,16 @@ local config = {
         wezterm.action.SendKey({ key = "l", mods = "CTRL" }),
       }),
     },
+    {
+      key = "z",
+      mods = "CMD",
+      action = wezterm.action.SendKey({ key = "z", mods = "CTRL" }),
+    },
+    {
+      key = "z",
+      mods = "CMD|SHIFT",
+      action = wezterm.action.SendKey({ key = "F13" }),
+    },
 	},
 }
 

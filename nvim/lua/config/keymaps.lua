@@ -31,6 +31,12 @@ end)
 
 -- editor
 -- vim.keymap.set("n", "<A-z>", "<leader>uw")
+vim.keymap.set("n", "<C-z>", "u", { desc = "Undo" })
+vim.keymap.set("i", "<C-z>", "<C-o>u", { desc = "Undo" })
+vim.keymap.set("v", "<C-z>", "<Esc>ugv", { desc = "Undo" })
+vim.keymap.set("n", "<F13>", "<C-r>", { desc = "Redo" })
+vim.keymap.set("i", "<F13>", "<C-o><C-r>", { desc = "Redo" })
+vim.keymap.set("v", "<F13>", "<Esc><C-r>gv", { desc = "Redo" })
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 vim.keymap.set("n", "<CR>", "o<Esc>", { desc = "New line below" })
