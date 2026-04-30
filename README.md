@@ -45,6 +45,7 @@ Make sure you have these installed:
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/) (required by some Neovim plugins)
 - A [Nerd Font](https://www.nerdfonts.com/) (for icons)
+- [fd](https://github.com/sharkdp/fd) (required by venv-selector.nvim to find Python virtual environments)
 
 ### Steps
 
