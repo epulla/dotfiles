@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor / swap files
+*.swp
+*.swo
+*~
+.netrwhist
+tags
+
+# Neovim / Lua local state
+nvim/spell/
+nvim/shada/
+nvim/.luarc.json
+nvim/lua/config/local.lua
+nvim/lua/plugins/local.lua
+
+# Backups
+*.bak
+*.orig
+
+# Logs
+*.log
