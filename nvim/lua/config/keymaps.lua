@@ -100,4 +100,14 @@ vim.keymap.set("n", "<leader>tl", function()
   vim.cmd("vsplit | terminal")
 end, { desc = "New Terminal splitted vertically (left)" })
 vim.keymap.set("t", "<M-Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+-- move between windows from terminal mode; re-enter terminal mode if landing on a terminal
+for _, dir in ipairs({ "h", "j", "k", "l" }) do
+  vim.keymap.set("t", "<C-" .. dir .. ">", function()
+    vim.cmd("stopinsert")
+    vim.cmd("wincmd " .. dir)
+    if vim.bo.buftype == "terminal" then
+      vim.cmd("startinsert")
+    end
+  end, { desc = "Go to window " .. dir })
+end
 
