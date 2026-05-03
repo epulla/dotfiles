@@ -41,7 +41,6 @@ return {
       require("bearded").setup({
         flavor = "vivid-black", -- change to any flavor you want
       })
-      vim.cmd.colorscheme("bearded")
     end,
   },
   -- Configure LazyVim
@@ -54,3 +53,4 @@ return {
     },
   },
 }
+
