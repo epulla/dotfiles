@@ -1,0 +1,5 @@
+# Ghostty config
+# Docs: https://ghostty.org/docs/config
+
+theme = Atom One Dark
+
