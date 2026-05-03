@@ -21,6 +21,14 @@ Personal dotfiles for Neovim and WezTerm. The repo is symlinked into the user's 
 
 Single-file config. Notable customization: Option/Command + arrow keys are remapped for word/line navigation.
 
+### Ghostty (`ghostty/`)
+
+Symlinked as a directory: `~/.config/ghostty` → `ghostty/`. Main config is `ghostty/config`.
+
+### Zsh (`.zshrc`, `zsh/`)
+
+Uses oh-my-zsh. `.zshrc` is symlinked to `~/.zshrc`. Custom oh-my-zsh files live in `zsh/` and are symlinked into `~/.oh-my-zsh/custom/` (e.g. `zsh/aliases.zsh` → `~/.oh-my-zsh/custom/aliases.zsh`). The oh-my-zsh framework itself is not vendored — install it separately, then symlink.
+
 ## Common workflows
 
 - Edit configs directly — symlinks mean changes are live on next Neovim/WezTerm launch.

@@ -8,6 +8,9 @@ Personal config files for Neovim and WezTerm.
 |---|---|
 | `nvim/` | Neovim config (LazyVim-based) |
 | `.wezterm.lua` | WezTerm terminal config |
+| `ghostty/` | Ghostty terminal config |
+| `.zshrc` | Zsh config (oh-my-zsh) |
+| `zsh/` | Custom oh-my-zsh files (aliases, etc.) |
 
 ### Neovim setup
 
@@ -42,10 +45,12 @@ Make sure you have these installed:
 
 - [Neovim](https://neovim.io/) (>= 0.9)
 - [WezTerm](https://wezfurlong.org/wezterm/)
+- [Ghostty](https://ghostty.org/)
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/) (required by some Neovim plugins)
 - A [Nerd Font](https://www.nerdfonts.com/) (for icons)
 - [fd](https://github.com/sharkdp/fd) (required by venv-selector.nvim to find Python virtual environments)
+- [oh-my-zsh](https://ohmyz.sh/) (for the zsh config)
 
 ### Steps
 
@@ -67,6 +72,9 @@ cp ~/.wezterm.lua ~/.wezterm.lua.bak
 ```bash
 rm -rf ~/.config/nvim
 rm ~/.wezterm.lua
+rm -rf ~/.config/ghostty
+rm ~/.zshrc
+rm ~/.oh-my-zsh/custom/aliases.zsh
 ```
 
 **4. Create symlinks:**
@@ -74,6 +82,9 @@ rm ~/.wezterm.lua
 ```bash
 ln -s ~/Desktop/projects/dotfiles/nvim ~/.config/nvim
 ln -s ~/Desktop/projects/dotfiles/.wezterm.lua ~/.wezterm.lua
+ln -s ~/Desktop/projects/dotfiles/ghostty ~/.config/ghostty
+ln -s ~/Desktop/projects/dotfiles/.zshrc ~/.zshrc
+ln -s ~/Desktop/projects/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 ```
 
 **5. Open Neovim** — LazyVim will automatically install all plugins on first launch:
