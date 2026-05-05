@@ -52,7 +52,7 @@ end, { desc = "Hover" })
 vim.keymap.set("n", "<leader>o", ":silent !open %:p:h<CR>", { silent = true })
 
 -- buffers
-vim.keymap.set("n", "<leader>bp", function()
+vim.keymap.set("n", "<leader>bcp", function()
   local path = vim.fn.expand("%:.")
   vim.fn.setreg("+", path)
   vim.notify("Copied: " .. path)
