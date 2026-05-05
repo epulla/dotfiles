@@ -24,3 +24,6 @@ nvim/lua/plugins/local.lua
 
 # Logs
 *.log
+
+# Local plans
+.plans/
