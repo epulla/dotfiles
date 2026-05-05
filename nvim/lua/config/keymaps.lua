@@ -51,14 +51,12 @@ end, { desc = "Hover" })
 -- open the current file's folder in finder
 vim.keymap.set("n", "<leader>o", ":silent !open %:p:h<CR>", { silent = true })
 
--- copy relative path
-vim.keymap.set("n", "<leader>cp", function()
+-- buffers
+vim.keymap.set("n", "<leader>bp", function()
   local path = vim.fn.expand("%:.")
   vim.fn.setreg("+", path)
   vim.notify("Copied: " .. path)
 end, { desc = "Copy relative path" })
-
--- buffers
 vim.keymap.set("n", "<leader>bh", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer left" })
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer right" })
 vim.keymap.set("n", "<leader>bL", function()
