@@ -108,6 +108,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# neovim alias
+alias vim="nvim"
+
 # Docker CLI Aliases
 alias dc="docker-compose"
 alias dl="aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 730502903637.dkr.ecr.us-east-1.amazonaws.com"
@@ -139,6 +142,9 @@ eval "$(zoxide init zsh)"
 
 # atuin
 eval "$(atuin init zsh)"
+
+# vim mode in terminal
+bindkey -v
 
 source /Users/epulla/.docker/init-zsh.sh || true # Added by Docker Desktop
 
