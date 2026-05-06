@@ -8,8 +8,8 @@
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # git aliases
 #
-alias gce="git config --global user.name epulla && git config --global user.email erickpulladsi@gmail.com"
-alias gchm="git config --global user.name epulla-hm && git config --global user.email epulla@happymoney.com"
+alias gce="git config --global user.name epulla && git config --global user.email erickpulladsi@gmail.com && echo 'Git creds updated to epulla (erickpulladsi@gmail.com)'"
+alias gchm="git config --global user.name epulla-hm && git config --global user.email epulla@happymoney.com && echo 'Git creds updated to epulla-hm (epulla@happymoney.com)'"
 
 # neovim alias
 alias vim="nvim"
