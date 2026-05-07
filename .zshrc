@@ -119,7 +119,7 @@ eval "$(atuin init zsh)"
 # vim mode in terminal
 bindkey -v
 
-source /Users/epulla/.docker/init-zsh.sh || true # Added by Docker Desktop
+source "$HOME/.docker/init-zsh.sh" || true # Added by Docker Desktop
 
 PATH=~/.console-ninja/.bin:$PATH
 
@@ -130,4 +130,8 @@ PATH=~/.console-ninja/.bin:$PATH
 
 
 ulimit -n 10240
+
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
 
