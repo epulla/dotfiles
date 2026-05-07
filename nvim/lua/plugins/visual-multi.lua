@@ -4,8 +4,8 @@ return {
     branch = "master",
     init = function()
       vim.g.VM_maps = {
-        ["Add Cursor Down"] = "<M-S-j>",
-        ["Add Cursor Up"] = "<M-S-k>",
+        ["Add Cursor Down"] = "<C-S-j>",
+        ["Add Cursor Up"] = "<C-S-k>",
         ["Find Under"] = "gb",
       }
     end,
