@@ -30,3 +30,6 @@ alias file-count="ls -1q | wc -l"
 # tmux
 alias tmux="tmux -2"
 
+# ssh
+alias ssh="TERM=xterm-256color ssh"
+
