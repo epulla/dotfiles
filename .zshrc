@@ -105,6 +105,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# pnpm
+export PNPM_HOME="/Users/epulla/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # zoxide
 eval "$(zoxide init zsh)"
 
