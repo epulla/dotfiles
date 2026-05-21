@@ -115,7 +115,9 @@ eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 
 # vim mode in terminal
-bindkey -v
+# bindkey -v
+# emacs mode in terminal
+bindkey -e
 
 source "$HOME/.docker/init-zsh.sh" || true # Added by Docker Desktop
 
