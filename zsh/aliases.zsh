@@ -24,6 +24,10 @@ alias dp="docker system prune -f --volumes"
 alias dx2="docker exec -it airflow2"
 alias dx2-test="docker exec -e AIRFLOW_ENV=test -it airflow2"
 
+# pnpm aliases
+alias pdcup="pnpm docker-up"
+alias pdcdown="pnpm docker-down"
+
 # utilities
 ## count files in a directory
 alias file-count="ls -1q | wc -l"
