@@ -11,6 +11,7 @@
 alias gce="git config --global user.name epulla && git config --global user.email erickpulladsi@gmail.com && echo 'Git creds updated to epulla (erickpulladsi@gmail.com)'"
 alias gchm="git config --global user.name epulla-hm && git config --global user.email epulla@happymoney.com && echo 'Git creds updated to epulla-hm (epulla@happymoney.com)'"
 alias gcleanup="git fetch --prune && git branch -vv | grep ': gone]' | awk '{print \$1}' | grep -v '^\*\|main' | xargs -r git branch -D"
+alias gwho="git config user.name && git config user.email"
 
 # neovim alias
 alias vim="nvim"
