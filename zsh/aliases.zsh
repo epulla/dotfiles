@@ -16,6 +16,10 @@ alias gwho="git config user.name && git config user.email"
 # neovim alias
 alias vim="nvim"
 
+# opencode aliases
+alias oc="opencode"
+alias occ="opencode --continue"
+
 # Docker CLI Aliases
 alias dc="docker-compose"
 alias dl="aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 730502903637.dkr.ecr.us-east-1.amazonaws.com"
