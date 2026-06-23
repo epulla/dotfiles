@@ -87,6 +87,11 @@ vim.keymap.set("n", "<leader>gg", function()
   Snacks.lazygit()
 end, { desc = "Lazygit" })
 
+-- grep always from cwd (project root)
+vim.keymap.set("n", "<leader>/", function()
+  Snacks.picker.grep({ cwd = vim.uv.cwd() })
+end, { desc = "Grep (cwd)" })
+
 -- terminal mode
 vim.keymap.set("n", "<leader>tt", function()
   vim.cmd("terminal")
