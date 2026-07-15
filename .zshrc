@@ -143,3 +143,21 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+
+gdams() {
+  echo "=== Deleting merged and squash-merged branches (local) ==="
+
+  git checkout main && git fetch --prune origin && git pull || return 1
+
+  for branch in $(git for-each-ref --format='%(refname:short)' --exclude=refs/heads/main refs/heads/); do
+    if git branch --merged main | grep -qw "$branch"; then
+      git branch -d "$branch" && echo "Deleted $branch (merged)"
+    elif [ -z "$(git cherry main "$branch" | grep '^+')" ]; then
+      git branch -D "$branch" && echo "Deleted $branch (squash-merged)"
+    else
+      echo "Keeping $branch (has unmerged changes)"
+    fi
+  done
+
+  echo "Done!"
+}
